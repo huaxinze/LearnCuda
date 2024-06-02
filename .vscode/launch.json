@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    // 01-hello_world
+    {
+      "name": "01-hello_world",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/01-hello_world/build/Debug/hello_world.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "console": "integratedTerminal",
+      "preLaunchTask": "01-hello_world-build", 
+    },
+    // 02-add_vector
+    {
+      "name": "02-add_vector",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/02-add_vector/build/Debug/add_vector.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "console": "integratedTerminal",
+      "preLaunchTask": "02-add_vector-build"
+    }
+  ]
+}

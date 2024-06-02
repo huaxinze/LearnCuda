@@ -1,0 +1,61 @@
+{
+    "tasks": [
+        // 01-hello_world-build
+        {
+            "type": "cppbuild",
+            "label": "01-hello_world-cmake",
+            "command": "cmake",
+            "args": [
+                "-G", "\"Visual Studio 16 2019\"", 
+                "-D", "CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE", 
+                "-S", "${workspaceFolder}/01-hello_world",
+                "-B", "${workspaceFolder}/01-hello_world/build",
+                "-T", "host=x64",
+                "-A", "x64"
+            ],
+            "detail": "cmake -G \"Visual Studio 16 2019\" ${workspaceFolder}",
+            "group": "build"
+        },
+        {
+            "type": "cppbuild",
+            "label": "01-hello_world-build",
+            "command": "cmake",
+            "args": [
+                "--build", "${workspaceFolder}/01-hello_world/build"
+            ],
+            "group": "build",
+            "dependsOn":[
+                "01-hello_world-cmake"  
+            ]
+        },
+        // 02-add_vector-build
+        {
+            "type": "cppbuild",
+            "label": "02-add_vector-cmake",
+            "command": "cmake",
+            "args": [
+                "-G", "\"Visual Studio 16 2019\"", 
+                "-D", "CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE", 
+                "-S", "${workspaceFolder}/02-add_vector",
+                "-B", "${workspaceFolder}/02-add_vector/build",
+                "-T", "host=x64",
+                "-A", "x64"
+            ],
+            "detail": "cmake -G \"Visual Studio 16 2019\" ${workspaceFolder}",
+            "group": "build"
+        },
+        {
+            "type": "cppbuild",
+            "label": "02-add_vector-build",
+            "command": "cmake",
+            "args": [
+                "--build", "${workspaceFolder}/02-add_vector/build"
+            ],
+            "group": "build",
+            "dependsOn":[
+                "02-add_vector-cmake"  
+            ]
+        },
+    ],
+    "version": "2.0.0"
+}

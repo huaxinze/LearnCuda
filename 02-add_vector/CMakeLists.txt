@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
-project(hello_world)
+project(add_vector)
 
 set(CMAKE_CXX_STANDARD 11)
  
@@ -8,5 +8,5 @@ set(CMAKE_CXX_STANDARD 11)
 find_package(CUDA REQUIRED)
 
 # 添加可执行文件
-cuda_add_executable(hello_world main.cu)
+cuda_add_executable(add_vector main.cu)
 
