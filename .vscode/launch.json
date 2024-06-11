@@ -26,6 +26,19 @@
       "environment": [],
       "console": "integratedTerminal",
       "preLaunchTask": "02-add_vector-build"
+    },
+    // 03-mat_transpose
+    {
+      "name": "03-mat_transpose",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/03-mat_transpose/build/Debug/mat_transpose.exe",
+      "args": ["20000"],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "console": "integratedTerminal",
+      "preLaunchTask": "03-mat_transpose-build"
     }
   ]
 }
