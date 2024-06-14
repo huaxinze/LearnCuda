@@ -39,6 +39,19 @@
       "environment": [],
       "console": "integratedTerminal",
       "preLaunchTask": "03-mat_transpose-build"
+    },
+    // 04-reduce
+    {
+      "name": "04-reduce",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/04-reduce/build/Debug/reduce.exe",
+      "args": ["20000"],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "console": "integratedTerminal",
+      "preLaunchTask": "04-reduce-build"
     }
   ]
 }

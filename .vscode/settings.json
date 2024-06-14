@@ -65,6 +65,7 @@
         "xstring": "cpp",
         "xtr1common": "cpp",
         "xutility": "cpp",
-        "__nullptr": "cpp"
+        "__nullptr": "cpp",
+        "__locale": "cpp"
     }
 }
