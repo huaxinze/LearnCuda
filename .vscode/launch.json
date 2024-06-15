@@ -52,6 +52,19 @@
       "environment": [],
       "console": "integratedTerminal",
       "preLaunchTask": "04-reduce-build"
+    },
+    // 05-layer_norm
+    {
+      "name": "05-layer_norm",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/05-layer_norm/build/Debug/layer_norm.exe",
+      "args": ["20000"],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "console": "integratedTerminal",
+      "preLaunchTask": "05-layer_norm-build"
     }
   ]
 }

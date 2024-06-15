@@ -112,6 +112,34 @@
                 "04-reduce-cmake"  
             ]
         },
+        // 05-layer_norm-build
+       {
+            "type": "cppbuild",
+            "label": "05-layer_norm-cmake",
+            "command": "cmake",
+            "args": [
+                "-G", "\"Visual Studio 16 2019\"", 
+                "-D", "CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE", 
+                "-S", "${workspaceFolder}/05-layer_norm",
+                "-B", "${workspaceFolder}/05-layer_norm/build",
+                "-T", "host=x64",
+                "-A", "x64"
+            ],
+            "detail": "cmake -G \"Visual Studio 16 2019\" ${workspaceFolder}",
+            "group": "build"
+        },
+        {
+            "type": "cppbuild",
+            "label": "05-layer_norm-build",
+            "command": "cmake",
+            "args": [
+                "--build", "${workspaceFolder}/05-layer_norm/build"
+            ],
+            "group": "build",
+            "dependsOn":[
+                "05-layer_norm-cmake"  
+            ]
+        },
     ],
     "version": "2.0.0"
 }
