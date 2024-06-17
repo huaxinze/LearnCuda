@@ -53,18 +53,31 @@
       "console": "integratedTerminal",
       "preLaunchTask": "04-reduce-build"
     },
-    // 05-layer_norm
+    // 05-layer_norm_forward
     {
-      "name": "05-layer_norm",
+      "name": "05-layer_norm_forward",
       "type": "cppvsdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/05-layer_norm/build/Debug/layer_norm.exe",
+      "program": "${workspaceFolder}/05-layer_norm_forward/build/Debug/layer_norm_forward.exe",
       "args": ["20000"],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
       "console": "integratedTerminal",
-      "preLaunchTask": "05-layer_norm-build"
+      "preLaunchTask": "05-layer_norm_forward-build"
+    },
+    // 06-layer_norm_backward
+    {
+      "name": "06-layer_norm_backward",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/06-layer_norm_backward/build/Debug/layer_norm_backward.exe",
+      "args": ["20000"],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "console": "integratedTerminal",
+      "preLaunchTask": "06-layer_norm_backward-build"
     }
   ]
 }

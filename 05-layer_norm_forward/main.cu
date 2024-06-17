@@ -563,8 +563,8 @@ int main(int argc, char **argv) {
         layernorm_forward(5, d_out, d_mean, d_rstd, d_inp, d_weight, d_bias, B, T, C, block_size);
         CHECK(cudaMemcpy(mean, d_mean, sizeof(float) * T * B, cudaMemcpyDeviceToHost));
         CHECK(cudaMemcpy(rstd, d_rstd, sizeof(float) * T * B, cudaMemcpyDeviceToHost));
-        printf("layernorm_forward2_gpu mean[%d][%d] = %f \n", B / 2, T / 2, mean[(B / 2) * T + (T / 2)]);
-        printf("layernorm_forward2_gpu rstd[%d][%d] = %f \n", B / 2, T / 2, rstd[(B / 2) * T + (T / 2)]);
+        // printf("layernorm_forward2_gpu mean[%d][%d] = %f \n", B / 2, T / 2, mean[(B / 2) * T + (T / 2)]);
+        // printf("layernorm_forward2_gpu rstd[%d][%d] = %f \n", B / 2, T / 2, rstd[(B / 2) * T + (T / 2)]);
     }
 
     free(out);

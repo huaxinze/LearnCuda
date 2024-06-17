@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
-project(layer_norm)
+project(layer_norm_forward)
 
 set(CMAKE_CXX_STANDARD 11)
  
@@ -8,5 +8,5 @@ set(CMAKE_CXX_STANDARD 11)
 find_package(CUDA REQUIRED)
 
 # 添加可执行文件
-cuda_add_executable(layer_norm main.cu)
+cuda_add_executable(layer_norm_forward main.cu)
 

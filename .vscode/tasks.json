@@ -112,16 +112,16 @@
                 "04-reduce-cmake"  
             ]
         },
-        // 05-layer_norm-build
-       {
+        // 05-layer_norm_forward-build
+        {
             "type": "cppbuild",
-            "label": "05-layer_norm-cmake",
+            "label": "05-layer_norm_forward-cmake",
             "command": "cmake",
             "args": [
                 "-G", "\"Visual Studio 16 2019\"", 
                 "-D", "CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE", 
-                "-S", "${workspaceFolder}/05-layer_norm",
-                "-B", "${workspaceFolder}/05-layer_norm/build",
+                "-S", "${workspaceFolder}/05-layer_norm_forward",
+                "-B", "${workspaceFolder}/05-layer_norm_forward/build",
                 "-T", "host=x64",
                 "-A", "x64"
             ],
@@ -130,14 +130,42 @@
         },
         {
             "type": "cppbuild",
-            "label": "05-layer_norm-build",
+            "label": "05-layer_norm_forward-build",
             "command": "cmake",
             "args": [
-                "--build", "${workspaceFolder}/05-layer_norm/build"
+                "--build", "${workspaceFolder}/05-layer_norm_forward/build"
             ],
             "group": "build",
             "dependsOn":[
-                "05-layer_norm-cmake"  
+                "05-layer_norm_forward-cmake"  
+            ]
+        },
+        // 06-layer_norm_backward-build
+        {
+            "type": "cppbuild",
+            "label": "06-layer_norm_backward-cmake",
+            "command": "cmake",
+            "args": [
+                "-G", "\"Visual Studio 16 2019\"", 
+                "-D", "CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE", 
+                "-S", "${workspaceFolder}/06-layer_norm_backward",
+                "-B", "${workspaceFolder}/06-layer_norm_backward/build",
+                "-T", "host=x64",
+                "-A", "x64"
+            ],
+            "detail": "cmake -G \"Visual Studio 16 2019\" ${workspaceFolder}",
+            "group": "build"
+        },
+        {
+            "type": "cppbuild",
+            "label": "06-layer_norm_backward-build",
+            "command": "cmake",
+            "args": [
+                "--build", "${workspaceFolder}/06-layer_norm_backward/build"
+            ],
+            "group": "build",
+            "dependsOn":[
+                "06-layer_norm_backward-cmake"  
             ]
         },
     ],
