@@ -78,6 +78,19 @@
       "environment": [],
       "console": "integratedTerminal",
       "preLaunchTask": "06-layer_norm_backward-build"
+    },
+    // 07-softmax_forward
+    {
+      "name": "07-softmax_forward",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/07-softmax_forward/build/Debug/softmax_forward.exe",
+      "args": ["20000"],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "console": "integratedTerminal",
+      "preLaunchTask": "07-softmax_forward-build"
     }
   ]
 }

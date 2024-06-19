@@ -168,6 +168,34 @@
                 "06-layer_norm_backward-cmake"  
             ]
         },
+        // 07-softmax_forward-build
+        {
+            "type": "cppbuild",
+            "label": "07-softmax_forward-cmake",
+            "command": "cmake",
+            "args": [
+                "-G", "\"Visual Studio 16 2019\"", 
+                "-D", "CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE", 
+                "-S", "${workspaceFolder}/07-softmax_forward",
+                "-B", "${workspaceFolder}/07-softmax_forward/build",
+                "-T", "host=x64",
+                "-A", "x64"
+            ],
+            "detail": "cmake -G \"Visual Studio 16 2019\" ${workspaceFolder}",
+            "group": "build"
+        },
+        {
+            "type": "cppbuild",
+            "label": "07-softmax_forward-build",
+            "command": "cmake",
+            "args": [
+                "--build", "${workspaceFolder}/07-softmax_forward/build"
+            ],
+            "group": "build",
+            "dependsOn":[
+                "07-softmax_forward-cmake"  
+            ]
+        },
     ],
     "version": "2.0.0"
 }
