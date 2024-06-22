@@ -104,6 +104,19 @@
       "environment": [],
       "console": "integratedTerminal",
       "preLaunchTask": "08-gelu_forward-build"
+    },
+    // 09-gelu_backward
+    {
+      "name": "09-gelu_backward",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/09-gelu_backward/build/Debug/gelu_backward.exe",
+      "args": ["20000"],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "console": "integratedTerminal",
+      "preLaunchTask": "09-gelu_backward-build"
     }
   ]
 }

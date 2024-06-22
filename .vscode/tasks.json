@@ -223,6 +223,34 @@
             "dependsOn":[
                 "08-gelu_forward-cmake"  
             ]
+        },
+        // 09-gelu_backward-build
+        {
+            "type": "cppbuild",
+            "label": "09-gelu_backward-cmake",
+            "command": "cmake",
+            "args": [
+                "-G", "\"Visual Studio 16 2019\"", 
+                "-D", "CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE", 
+                "-S", "${workspaceFolder}/09-gelu_backward",
+                "-B", "${workspaceFolder}/09-gelu_backward/build",
+                "-T", "host=x64",
+                "-A", "x64"
+            ],
+            "detail": "cmake -G \"Visual Studio 16 2019\" ${workspaceFolder}",
+            "group": "build"
+        },
+        {
+            "type": "cppbuild",
+            "label": "09-gelu_backward-build",
+            "command": "cmake",
+            "args": [
+                "--build", "${workspaceFolder}/09-gelu_backward/build"
+            ],
+            "group": "build",
+            "dependsOn":[
+                "09-gelu_backward-cmake"  
+            ]
         }
     ],
     "version": "2.0.0"
