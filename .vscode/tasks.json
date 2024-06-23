@@ -251,6 +251,34 @@
             "dependsOn":[
                 "09-gelu_backward-cmake"  
             ]
+        },
+        // 10-gemm-build
+        {
+            "type": "cppbuild",
+            "label": "10-gemm-cmake",
+            "command": "cmake",
+            "args": [
+                "-G", "\"Visual Studio 16 2019\"", 
+                "-D", "CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE", 
+                "-S", "${workspaceFolder}/10-gemm",
+                "-B", "${workspaceFolder}/10-gemm/build",
+                "-T", "host=x64",
+                "-A", "x64"
+            ],
+            "detail": "cmake -G \"Visual Studio 16 2019\" ${workspaceFolder}",
+            "group": "build"
+        },
+        {
+            "type": "cppbuild",
+            "label": "10-gemm-build",
+            "command": "cmake",
+            "args": [
+                "--build", "${workspaceFolder}/10-gemm/build"
+            ],
+            "group": "build",
+            "dependsOn":[
+                "10-gemm-cmake"  
+            ]
         }
     ],
     "version": "2.0.0"

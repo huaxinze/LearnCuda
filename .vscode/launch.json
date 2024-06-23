@@ -117,6 +117,19 @@
       "environment": [],
       "console": "integratedTerminal",
       "preLaunchTask": "09-gelu_backward-build"
+    },
+    // 10-gemm
+    {
+      "name": "10-gemm",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/10-gemm/build/Debug/gemm.exe",
+      "args": ["20000"],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "console": "integratedTerminal",
+      "preLaunchTask": "10-gemm-build"
     }
   ]
 }
