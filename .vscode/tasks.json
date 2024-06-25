@@ -279,6 +279,34 @@
             "dependsOn":[
                 "10-gemm-cmake"  
             ]
+        },
+        // 11-crossentropy_forward-build
+        {
+            "type": "cppbuild",
+            "label": "11-crossentropy_forward-cmake",
+            "command": "cmake",
+            "args": [
+                "-G", "\"Visual Studio 16 2019\"", 
+                "-D", "CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE", 
+                "-S", "${workspaceFolder}/11-crossentropy_forward",
+                "-B", "${workspaceFolder}/11-crossentropy_forward/build",
+                "-T", "host=x64",
+                "-A", "x64"
+            ],
+            "detail": "cmake -G \"Visual Studio 16 2019\" ${workspaceFolder}",
+            "group": "build"
+        },
+        {
+            "type": "cppbuild",
+            "label": "11-crossentropy_forward-build",
+            "command": "cmake",
+            "args": [
+                "--build", "${workspaceFolder}/11-crossentropy_forward/build"
+            ],
+            "group": "build",
+            "dependsOn":[
+                "11-crossentropy_forward-cmake"  
+            ]
         }
     ],
     "version": "2.0.0"

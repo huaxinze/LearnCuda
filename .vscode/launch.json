@@ -130,6 +130,19 @@
       "environment": [],
       "console": "integratedTerminal",
       "preLaunchTask": "10-gemm-build"
+    },
+    // 11-crossentropy_forward
+    {
+      "name": "11-crossentropy_forward",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/11-crossentropy_forward/build/Debug/crossentropy_forward.exe",
+      "args": ["20000"],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "console": "integratedTerminal",
+      "preLaunchTask": "11-crossentropy_forward-build"
     }
   ]
 }
