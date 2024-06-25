@@ -67,6 +67,7 @@
         "xutility": "cpp",
         "__nullptr": "cpp",
         "__locale": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "target": "cpp"
     }
 }
