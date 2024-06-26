@@ -335,6 +335,34 @@
             "dependsOn":[
                 "12-crossentropy_softmax_backward-cmake"  
             ]
+        },
+        // 13-encoder_forward-build
+        {
+            "type": "cppbuild",
+            "label": "13-encoder_forward-cmake",
+            "command": "cmake",
+            "args": [
+                "-G", "\"Visual Studio 16 2019\"", 
+                "-D", "CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE", 
+                "-S", "${workspaceFolder}/13-encoder_forward",
+                "-B", "${workspaceFolder}/13-encoder_forward/build",
+                "-T", "host=x64",
+                "-A", "x64"
+            ],
+            "detail": "cmake -G \"Visual Studio 16 2019\" ${workspaceFolder}",
+            "group": "build"
+        },
+        {
+            "type": "cppbuild",
+            "label": "13-encoder_forward-build",
+            "command": "cmake",
+            "args": [
+                "--build", "${workspaceFolder}/13-encoder_forward/build"
+            ],
+            "group": "build",
+            "dependsOn":[
+                "13-encoder_forward-cmake"  
+            ]
         }
     ],
     "version": "2.0.0"
